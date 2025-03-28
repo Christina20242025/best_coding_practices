@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #000000, #ff1c26); /* Gradient black to red */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            flex-direction: column;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff1c26, #ff4b5c, #ff736d, #f1c232);
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: glowingText 1.5s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.8);
+            margin-bottom: 20px;
+        }
+
+        @keyframes glowingText {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.8);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 255, 0, 1), 0 0 50px rgba(255, 0, 0, 1);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.8);
+            }
+        }
+
+        h2, h3 {
+            color: red; /* Red text for headings */
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        h3 {
+            color: yellow;
+            background: linear-gradient(90deg, #ff1c26, #ff4b5c);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+        }
+
+        .section {
+            display: none;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            background-color: #333;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #444;
+            color: #fff;
+            padding: 15px 30px;
+            margin: 5px 0;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #666;
+        }
+
+        button.selected {
+            background: linear-gradient(to right, #000000, #ff1c26); /* Gradient black to red when selected */
+            color: white;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: red;
+        }
+
+        #reward-image {
+            width: 200px;
+            border-radius: 10px;
+            display: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Consistent styling for the summary */
+        #summary {
+            font-size: 2em;
+            text-align: center;
+            padding: 20px;
+            color: #ff1c26;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff1c26, #ff4b5c, #ff736d, #f1c232);
+            -webkit-background-clip: text;
+            animation: glowingText 1.5s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            color: #ff4b5c;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #instructions {
+            color: yellow;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff1c26, #ff4b5c);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 0, 0.8);
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #000000, #ff1c26); /* Gradient black to red */
+        }
+
+        footer {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to right, #f1c232, #ff1c26, #000000); /* Gradient yellow to red to black */
+            color: white; /* White text */
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Building Future-Proof Websites</h1>
+
+    <section id="best-practices" class="section active">
+        <div id="instructions">
+            <p>Select the best practices you follow to ensure your website is optimized and built for the future!</p>
+        </div>
+        <ul id="practices-list"></ul>
+
+        <h3>Summary</h3>
+        <div id="summary">
+            You have implemented <span id="count">0</span> best practices out of 15.
+        </div>
+        <div id="success-message" class="success-message"></div>
+        <img id="reward-image" src="" alt="">
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            const practices = [
+                "Use Semantic HTML", "Optimize Images", "Minimize CSS & JavaScript", "Use Responsive Design", 
+                "Follow Accessibility Guidelines", "Ensure Cross-Browser Compatibility", "Write Clean & Maintainable Code", 
+                "Use Version Control", "Minimize HTTP Requests", "Implement Proper Error Handling", "Validate User Input", 
+                "Use Caching", "Follow DRY Principle (Don't Repeat Yourself)", "Use Meaningful Commit Messages", "Test the Code"
+            ];
+
+            const list = $("#practices-list");
+            practices.forEach((practice, index) => {
+                let isChecked = localStorage.getItem(`practice-${index}`) === "true";
+                list.append(
+                    `<li>
+                        <button class="practice-btn" id="practice-${index}" ${isChecked ? "data-selected='true'" : ""}>
+                            ${practice}
+                        </button>
+                    </li>`
+                );
+            });
+
+            $(".practice-btn").click(function () {
+                let id = $(this).attr("id");
+                let selected = $(this).hasClass("selected");
+                
+                if (selected) {
+                    $(this).removeClass("selected");
+                    localStorage.setItem(id, "false");
+                } else {
+                    $(this).addClass("selected");
+                    localStorage.setItem(id, "true");
+                }
+
+                updateSummary();
+            });
+
+            function updateSummary() {
+                let count = $(".practice-btn.selected").length;
+                $("#count").text(count);
+
+                // Dynamic message when success criteria is met
+                if (count >= 12) {
+                    $("#success-message").text("Congratulations! You've met the success criteria (Over 12/15 best practices). Here's your reward!");
+                    fetchRandomAnimal();
+                } else {
+                    $("#success-message").text("Keep it up! Select more practices to meet the success criteria.");
+                    $("#reward-image").hide();
+                }
+            }
+
+            function fetchRandomAnimal() {
+                $.ajax({
+                    url: "https://api.thecatapi.com/v1/images/search",
+                    method: "GET",
+                    success: function (data) {
+                        let imageUrl = data[0].url;
+                        $("#reward-image").show().attr("src", imageUrl);
+                    }
+                });
+            }
+
+            updateSummary();
+        });
+    </script>
+
+    <footer>
+        <p>References:</p>
+        <p>
+            ChatGPT, OpenAI. <br>
+            <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">W3Schools: CSS3 Animations</a> | 
+            <a href="https://stackoverflow.com/questions/60797390/generate-random-image-by-url" target="_blank">StackOverflow: Generate Random Image by URL</a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christina Fington - Interactive CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: black;
+            color: red;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        header {
+            background: linear-gradient(120deg, black, darkred, crimson, red);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid red;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-align: center;
+            color: yellow;
+            text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+            animation: glowing 1.5s ease-in-out infinite;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            color: yellow;
+            text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+            animation: glowing 1.5s ease-in-out infinite;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 100%;
+            color: yellow;
+            text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+            animation: glowing 1.5s ease-in-out infinite;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: black;
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            flex: 1;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+            color: red;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(120deg, black, darkred, crimson, red);
+            color: white;
+        }
+
+        .skills-circle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border: 10px solid red;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+            color: white;
+        }
+
+        .circle:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(120deg, black, darkred, crimson, red);
+        }
+
+        footer {
+            text-align: center;
+            padding: 0.5rem 0; /* Reduced padding */
+            background: linear-gradient(120deg, yellow, red, black);
+            color: white;
+            font-size: 0.9rem; /* Smaller font size */
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-icon {
+            text-align: center;
+            color: red;
+            font-size: 2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 150px;
+            border: 5px solid red;
+            border-radius: 50%;
+            font-weight: bold;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-icon:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(120deg, black, darkred, crimson, red);
+        }
+
+        .contact-icon i {
+            font-size: 3rem;
+            transition: color 0.3s ease;
+            color: white;
+        }
+
+        .contact-text {
+            font-size: 0.8rem;
+            color: white; /* Text inside circles changed to white */
+            margin-top: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icon:hover i,
+        .contact-icon:hover .contact-text {
+            color: white;
+        }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 5px black, 0 0 10px red, 0 0 15px yellow; }
+            50% { text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow; }
+            100% { text-shadow: 0 0 5px black, 0 0 10px red, 0 0 15px yellow; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src= "C:\Users\Hp\Pictures\UWA COURSES\WEEK 3\AGILE WEB DEVELOPMENT\project\CHRISTINA FINGTON PHOTO.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Christina Fington</h1>
+        <p>Web Developer | IT Specialist | Karate Master</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">About Me</h2>
+            <p>I am an experienced IT Specialist and Web Developer with a strong background in optimizing IT infrastructures and developing web-based solutions. Currently, I work at Hansen Technologies, where I manage IT systems, troubleshoot issues, and enhance network security while also developing responsive websites and web applications using HTML5, CSS3, JavaScript, and React.js. My passion for technology is complemented by my experience in martial arts, where I served as an Assistant Karate Master, guiding students and promoting fitness and discipline. With a broad skill set and a focus on innovation, I am dedicated to delivering high-quality solutions and providing exceptional support to clients and teams.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="content">
+                <div class="card">
+                    <h3>Web Developer</h3>
+                    <p><strong>TechDilation</strong> | July 2021 – February 2023</p>
+                    <p>Developed high-performance websites and web applications, focusing on front-end and back-end development. Collaborated with teams to build responsive, scalable solutions, integrate APIs, and implement security measures while staying up-to-date with the latest web technologies.</p>
+                </div>
+
+                <div class="card">
+                    <h3>IT Specialist</h3>
+                    <p><strong>Hansen Technologies</strong> | February 2020 - June 2022</p>
+                    <p>Manage IT infrastructure, troubleshoot issues, provide technical support, and implement solutions to optimize system efficiency and security.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Assistant Karate Master</h3>
+                    <p><strong>Shorin Ryu International Karate Association</strong> | Jan 2016 - Jan 2024</p>
+                    <p>Trained and guided students in martial arts and fitness disciplines, promoting physical fitness, discipline, and personal growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-circle">
+                <div class="circle">Python</div>
+                <div class="circle">C++</div>
+                <div class="circle">HTML5</div>
+                <div class="circle">CSS3</div>
+                <div class="circle">JavaScript</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Contact Details</h2>
+            <div class="contact-icons">
+                <div class="contact-icon">
+                    <a href="mailto:christinafington@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">Email Me</div>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <a href="tel:+61493949579">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">Contact Me</div>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <a href="https://www.instagram.com/christinafington/profilecard/?igsh=MXJlNmxpYnBteDJldg==" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <div class="contact-text">Instagram</div>
+                    </a>
+                </div>
+                <div class="contact-icon">
+                    <a href="https://www.facebook.com/share/1BSHqeaSNh/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <div class="contact-text">Facebook</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>References:</p>
+        <p><a href="https://chat.openai.com" target="_blank">ChatGPT</a> | <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations - W3Schools</a> | <a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">HTML Buttons - W3Schools</a></p>
+    </footer>
+</body>
+</html>
