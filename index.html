@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #000000, #ff1c26);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h3 {
+            font-size: 3.5em; /* Larger font size for the heading */
+            text-align: center;
+            color: #FFD700; /* A hint of yellow */
+            font-weight: bold;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2em; /* Smaller font size for the rest of the text */
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+            font-weight: bold; /* Make the text bold */
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #ff1c26, 0 0 10px #ff1c26, 0 0 15px #ff1c26, 0 0 20px #ff1c26;
+            }
+            50% {
+                text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #ff4b5c, 0 0 20px #ff4b5c;
+            }
+            100% {
+                text-shadow: 0 0 10px #000000, 0 0 20px #ff4b5c, 0 0 30px #ff4b5c, 0 0 40px #ff4b5c;
+            }
+        }
+
+        .nav-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button {
+            background-color: #444;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .nav-button:hover {
+            background: linear-gradient(to right, #FFD700, #ff1c26, #000000); /* Gradient background on hover */
+            color: #FFD700; /* Yellow text on hover */
+            transform: scale(1.1); /* Pop outward */
+        }
+    </style>
+</head>
+<body>
+    <h3>Welcome to our Best Coding Practices website!</h3>
+    <p>This site is designed to help web developers explore key best practices in HTML, CSS, and JavaScript while assessing their own adherence to them. You can select the practices you follow and receive a summary of your progress. Additionally, there's a dedicated page to introduce the author, serving as a CV for the teaching team. Dive in and refine your coding skills!</p>
+    <div class="nav-container">
+        <a href="best-practices.html" class="nav-button">Best Practices</a>
+        <a href="cv_webpage.html" class="nav-button">Author</a>
+    </div>
+</body>
+</html>
