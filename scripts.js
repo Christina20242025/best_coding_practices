@@ -1,5 +1,5 @@
 const practices = [
-    "Pratice 1: Correct Application of Semantic HTML Tags: The use of semantic HTML tags makes it possible for browsers, search engines, and other aid technologies to more easily comprehend the framework of the page content and its meaning.",
+    "Pratice 1: Correct Application of Semantic HTML Tags, the use of semantic HTML tags makes it possible for browsers, search engines, and other aid technologies to more easily comprehend the framework of the page content and its meaning.",
     "Practice 2: Ensure mobile responsiveness",
     "Practice 3: Follow DRY (Don't Repeat Yourself) principle",
     "Practice 4: Implement proper form validation",
