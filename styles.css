@@ -1,0 +1,297 @@
+/* This section is for the global styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: red;
+    line-height: 1.8;
+    font-weight: bold;
+    text-align: center; /* This statement will ensuring text is centered globally */
+}
+
+/* This section is for the header section */
+header {
+    background: linear-gradient(120deg, black, darkred, crimson, red);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: yellow;
+    text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+    animation: glowing 1.5s ease-in-out infinite;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: yellow;
+    text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+    animation: glowing 1.5s ease-in-out infinite;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid red;
+    margin-bottom: 1rem;
+}
+
+/* This is the container for all content */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* This is stlying for all the section titles */
+.section-title {
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    color: yellow;
+    text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow;
+    animation: glowing 1.5s ease-in-out infinite;
+}
+
+/* This is the styling section for the general content layout */
+.content {
+    display: flex;
+    justify-content: center; /* This code will ensure that the content is centered horizontally */
+    align-items: center;     /* This code will ensure that the content is centered vertically */
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* This is the styling section for the card styles */
+.card {
+    background: black;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    color: red;
+    text-align: center; /* This will ensure that the text inside cards is centered */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(120deg, black, darkred, crimson, red);
+    color: white;
+}
+
+/* This is the styling section for the skills circle */
+.skills-circle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border: 10px solid red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    color: white;
+    text-align: center; /* This code will ensure that the text inside circles is centered */
+}
+
+.circle:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(120deg, black, darkred, crimson, red);
+}
+
+/* This is the styling section for the footer */
+footer {
+    text-align: center;
+    padding: 0.5rem 0; /* This code is for reducing the padding */
+    background: linear-gradient(120deg, yellow, red, black);
+    color: white;
+    font-size: 0.9rem; /* This is the code for smaller font size */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* This is the styling section for the contact icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-icon {
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: 5px solid red;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(120deg, black, darkred, crimson, red);
+}
+
+.contact-icon i {
+    font-size: 3rem;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+.contact-text {
+    font-size: 0.8rem;
+    color: white; /* This is the code for the text inside circles changed to white */
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-icon:hover i,
+.contact-icon:hover .contact-text {
+    color: white;
+}
+
+/* Styling the navigation Buttons */
+.nav-buttons {
+    margin: 20px;
+}
+#practices-list {
+    list-style-type: none;  /* This is the code that removes the default bullet points */
+    padding: 0;  /* This is the code that removes the default padding */
+}
+
+#practices-list li {
+    margin-bottom: 10px;  /* This is the code that adds some spacing between the list items */
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Another styling for the sections (best practices) */
+.section {
+    display: none;
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center; /* This is the code that ensures section text is centered */
+}
+
+.active {
+    display: block;
+}
+
+/* The styling section for the practice button */
+.practice-btn {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.practice-btn.selected {
+    background-color: #ff4b5c;
+}
+
+.practice-btn:hover {
+    background-color: #555;
+}
+
+/* This is the styling section for the success message */
+.success-message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4b5c;
+    text-align: center; /* This code will ensure success message is centered */
+}
+
+#reward-image {
+    margin-top: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* This is for the keyframes for glowing text effect */
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px black, 0 0 10px red, 0 0 15px yellow; }
+    50% { text-shadow: 0 0 10px black, 0 0 20px red, 0 0 30px yellow; }
+    100% { text-shadow: 0 0 5px black, 0 0 10px red, 0 0 15px yellow; }
+}
+
+/* This is for media query for responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+    }
+
+    .contact-icon {
+        width: 120px;
+        height: 120px;
+    }
+}

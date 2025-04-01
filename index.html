@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Contains Meta Information along with Page Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Add on Units and Fonts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Style Sheet Adjustment -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Primary Title -->
+    <h1>Building Future-Proof Websites</h1>
+    <!-- Control Elements -->
+    <div class="nav-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('best-practices')">Best Practices</button>
+        <button onclick="showSection('cv')">CV</button>
+    </div>
+
+    <!-- Start Part -->
+    <div id="home" class="section active">
+        <h2>Welcome to our Best Coding Practices website!</h2>
+        <p>This site is designed to help web developers explore key best practices in HTML, CSS, and JavaScript while assessing their own adherence to them. You can select the practices you follow and receive a summary of your progress. Additionally, there's a dedicated page to introduce the author, serving as a CV for the teaching team. Dive in and refine your coding skills!</p>
+    </div>
+
+    <!-- Section of Most Effective Strategies -->
+    <div id="best-practices" class="section">
+        <h2>Best Practices</h2>
+        <ul id="practices-list"></ul>
+
+        <!-- Conclusion Section -->
+        <h3>Summary</h3>
+        <div id="summary">
+            You have implemented <span id="count">0</span> best practices out of 15.
+        </div>
+        
+        
+        <div id="success-message" class="success-message"></div>
+        <!-- Placeholder for Prize image -->
+        <img id="reward-image" src="" alt="">
+    </div>
+
+    <!-- Section of CV -->
+    <div id="cv" class="section">
+        <header>
+            <!-- Section of Profile Picture and Information -->
+            <img src= "C:\Users\Hp\Pictures\UWA COURSES\SEMESTER 3\AGILE WEB DEVELOPMENT\project\CHRISTINA FINGTON PHOTO.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Christina Fington</h1>
+            <p>Web Developer | IT Specialist | Karate Master</p>
+        </header>
+
+        <div class="container">
+            <!-- Section of Biographical Information -->
+            <section>
+                <h2 class="section-title">About Me</h2>
+                <p>As an IT Specialist and Web Developer with professional experience in optimizing IT infrastructures as well as developing web-based solutions, I have previously worked with Hansen Technologies where I performed IT system management, troubleshooting, and network security, all while developing responsive websites and applications using HTML5, CSS3, Java Script, and React.js. In addition to my passion for technology, I served as an Assistant Karate Master where I taught students the importance of fitness and discipline. Blending innovation with a vast skill set, I strive to exceed expectations in providing exceptional solutions and support to clients and teammates alike.
+                </p>
+            </section>
+
+             <!-- Section of Professional Experience -->
+            <section>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="content">
+                    <div class="card">
+                        <h3>Web Developer</h3>
+                        <p><strong>TechDilation</strong> | July 2021 – February 2023</p>
+                        <p>Engineered powerful websites and web applications specializing in backend and frontend development. Worked with other teams to create responsive and scalable solutions with embedded APIs and security features while keeping abreast with modern web technologies.
+                        </p>
+                    </div>
+    
+                    <div class="card">
+                        <h3>IT Specialist</h3>
+                        <p><strong>Hansen Technologies</strong> | February 2020 - June 2022</p>
+                        <p>Oversee IT infrastructure, resolve problems, offer engineering support, and deploy measures to enhance system performance efficiency and security.
+                        </p>
+                    </div>
+    
+                    <div class="card">
+                        <h3>Assistant Karate Master</h3>
+                        <p><strong>Shorin Ryu International Karate Association</strong> | Jan 2016 - Jan 2024</p>
+                        <p>Fostered and prepared students in martial arts and fitness disciplines, enhancing their physical fitness, discipline, and selfgrowth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section of Areas of Expertise -->
+            <section>
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-circle">
+                    <div class="circle">Python</div>
+                    <div class="circle">C++</div>
+                    <div class="circle">HTML5</div>
+                    <div class="circle">CSS3</div>
+                    <div class="circle">JavaScript</div>
+                </div>
+            </section>
+            
+            <!-- Section of Personal Information -->
+            <section>
+                <h2 class="section-title">Contact Details</h2>
+                <div class="contact-icons">
+                    <div class="contact-icon">
+                        <a href="mailto:janedoe@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">Email Me</div>
+                        </a>
+                    </div>
+                    <div class="contact-icon">
+                        <a href="tel:+61123456789">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-text">Contact Me</div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+     
+    <!-- Section for references -->
+    <footer>
+        <h3>References</h3>
+        <p>OpenAI. (2025, March 31). I used for ChatGPT for most of codes of JavaScript and little bit for the styling especially the glowing effect and the gradient effect for the headings. And even used it for the codes for fetching random cute cat pics. Retrieved from <a href="https://www.openai.com/chatgpt" target="_blank">https://www.openai.com/chatgpt</a></p>
+        <p>GeeksforGeeks. (n.d.). I used this website to get the idea of how to start with making this entire website which has all the three coding that is HTML, CSS and JavaScript. GeeksforGeeks. Retrieved from <a href="https://www.geeksforgeeks.org/how-to-create-a-portfolio-website-using-html-css-and-javascript/?" target="_blank">https://www.geeksforgeeks.org/how-to-create-a-portfolio-website-using-html-css-and-javascript/?</a></p>
+        <p>W3Schools. (n.d.). I used this website for me to get an idea of the layout of my CV Webpage. W3Schools. Retrieved from <a href="https://www.w3schools.com/howto/howto_website_create_portfolio.asp?" target="_blank">https://www.w3schools.com/howto/howto_website_create_portfolio.asp?</a></p>
+        <p>CodeWithCurious. (n.d.). I used this website for getting some more insights of the codes HTML, CSS and Javascript for making the entire website as a whole. CodeWithCurious. Retrieved from <a href="https://codewithcurious.com/projects/personal-portfolio-using-html-css-js/?" target="_blank">https://codewithcurious.com/projects/personal-portfolio-using-html-css-js/?</a></p>
+    </footer>
+    
+    <!-- Add on JavaScript File -->
+    <script src="scripts.js"></script>
+</body>
+</html>
