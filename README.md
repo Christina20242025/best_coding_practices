@@ -5,7 +5,7 @@ Go through an inclusive list of 15 best practices which include semantic HTML, m
 Choose the best practices they follow in an interactive way and measure their advancement. 
 Receive feedback on how many best practices they have fulfilled to help them gauge their skill level. Users who follow 12 out of the 15 practices are rewarded with a cute cat image, which implements fun and engagement into the learning experience. 
 
-2. Developer Portfolio (CV Section) The website acts as a personal portfolio for Christina Fington, a Web Developer, IT Specialist, and a Karate Master. This portfolio contains: 
+2. Developer Portfolio (CV Section) The website acts as a personal portfolio for XYZ ABC, a Web Developer, IT Specialist, and a Karate Master. This portfolio contains: 
 About Me – Short bio with description of the student’s skills and expertise. 
 Work Experience – Description of previous web development and IT system management, and martial arts instruction positions. 
 Skills Section – Describes ability to work with different programming languages such as Python, C++, HTML5, CSS3 and JavaScript.
